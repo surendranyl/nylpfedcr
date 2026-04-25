@@ -8,8 +8,8 @@ data:
   PING_IDENTITY_ACCEPT_EULA: "YES"
   HEAP_MIN: 4g
   HEAP_MAX: 6g
-  NR_AGENT: "-javaagent:/opt/out/instance/server/default/conf/newrelic.jar"
-  NR_KEY: NR_LIC
+  NR_AGENT: " "
+  NR_KEY: " "
   PF_ENV: "pf-api-prod"
 
  
