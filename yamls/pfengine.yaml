@@ -14,7 +14,7 @@ data:
 
  
   #Base Server Profile - This pulls config relevant to conf, data and deploy ditectories
-  SERVER_PROFILE_URL: https://068bceabb129402e0e007dd6908ec23380da17ba@git.nylcloud.com/ECS/nylpfedapiprod
+  SERVER_PROFILE_URL: https://github.com/surendranyl/nylpfedcr
   SERVER_PROFILE_PATH: layered-profiles/pingfederate
 
 kind: ConfigMap
