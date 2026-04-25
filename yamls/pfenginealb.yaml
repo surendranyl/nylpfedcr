@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "pfengine-alb-ingress"
+  namespace: "pfapps"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    #alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/backend-protocol: HTTPS
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
+    alb.ingress.kubernetes.io/healthcheck-path: /pf/heartbeat.ping
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:905418223562:certificate/11b42b32-b9cf-42f5-9b8d-20a0e69d3417
+    alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-2016-08
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+  labels:
+    app: pingfederate-engine-10-2-1
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix 
+            backend:
+              service:
+                name: "pingfederate-engine-main"
+                port: 
+                  number: 9031
