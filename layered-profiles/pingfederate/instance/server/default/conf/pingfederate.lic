@@ -1,0 +1,15 @@
+ID=00681577
+WSTrustSTS=true
+OAuth=true
+SaasProvisioning=true
+Product=PingFederate
+Version=12.1
+EnforcementType=3
+Tier=Subscription
+IssueDate=2024-06-25
+ExpirationDate=2027-06-26
+GracePeriod=1
+DeploymentMethod=Traditional
+Organization=New York Life Insurance Co.
+SignCode=FF1F
+Signature=302E0215009630C05BBFCB5A1B2EE563CC2CD71DFE10BE56A602150096B655625968305E7898FDE87DF0844452667FF2
